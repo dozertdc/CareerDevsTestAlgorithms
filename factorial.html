@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial Algorithm</title>
+</head>
+<body>
+    <input id="number" type="text"/>
+    <button id="answer">Factorial</button>
+    <div id="show"></div>
+    <script>
+        document.getElementById("answer").addEventListener("click", function(){
+            document.getElementById("show").innerHTML = "Answer: ";
+            var answer;
+            var n = parseInt(document.getElementById("number").value);
+            function factorial(n){
+                if(n<0){
+                    return "Please Input a Positive Int"
+                }
+                if(n == 0 || n==1) {
+                    return 1;
+                } else {
+                    return n * factorial(n - 1);
+                }
+            }
+            document.getElementById("show").innerHTML = "Answer: " + factorial(n);
+        });
+      
+    </script>
+    
+    
+</body>
+</html>

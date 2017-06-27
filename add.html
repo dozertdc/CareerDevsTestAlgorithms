@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Addition Algorithm</title>
+</head>
+<body>
+     <!--Collect User Information-->
+     <input id="firstNumber" type="text"/><br/>
+     <input id="secondNumber" type="text"/><br/>
+     <button id="getAnswer">Add</button>
+     <div id="answer">Answer: </div>
+     <script>
+          //on click calculate
+          document.getElementById("getAnswer").addEventListener("click", function(){
+               document.getElementById("answer").innerHTML = "Answer: ";
+               var firstNumber = document.getElementById("firstNumber").value;
+               var secondNumber = document.getElementById("secondNumber").value;
+               firstNumber = parseInt(firstNumber);
+               secondNumber = parseInt(secondNumber);
+               var answer = firstNumber + secondNumber;
+               document.getElementById("answer").innerHTML = "Answer: " + answer;
+          })
+     </script>
+
+</body>
+</html>
+
+
